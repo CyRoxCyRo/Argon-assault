@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -75,18 +74,20 @@ public class PlayerController : MonoBehaviour
     {
         if(CrossPlatformInputManager.GetButton("Fire1"))
         {
-            foreach(GameObject gun in guns)
-            {
-                gun.SetActive(true);
-            }
-
+            SetGunsActive(true);
         }
         else
         {
-            foreach (GameObject gun in guns)
-            {
-                gun.SetActive(false);
-            }
+            SetGunsActive(false);
+        }
+    }
+
+    private void SetGunsActive(bool isActive)
+    {
+        foreach (GameObject gun in guns)
+        {
+            var gunEmission = gun.GetComponentInChildren<ParticleSystem>().emission;
+            gunEmission.enabled = isActive;
         }
     }
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1074994750746910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1.7287916}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,4 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 9133735156858936676, guid: ddf9afaa1ea3aee4a9e8d122d81b5cd0,
     type: 3}
+  parent: {fileID: 0}
+  healthPoints: 10
   destroyDelay: 4
+  points: 12
